@@ -223,7 +223,7 @@ tyrannical.tags = {
         exclusive = true,
         no_focus_stealing = true,
         screen = {1, 2, 3},
-        class = {"Mumble", "Pidgin"},
+        class = {"Mumble", "Pidgin", "Telegram", "TelegramDesktop"},
         volatile = true,
     },
     {
@@ -403,7 +403,7 @@ cpuwidget = wibox.container.background(lain.widgets.cpu({
 neticon = wibox.widget.imagebox(theme.widget_net)
 neticonbg = wibox.container.background(neticon, alt_bg)
 netwidget = wibox.container.background(lain.widgets.net({
-    iface = "enp3s0",
+    iface = "wls1",
     settings = function()
         widget:set_markup(
             markup.bg.color(alt_bg,
@@ -938,21 +938,21 @@ r.run("unclutter -idle 2 -noevents")
 r.run("compton -b")
 
 -- Email Notifications
-r.run("~/.bin/mailcheck.sh")
+-- r.run("~/.bin/mailcheck.sh")
 -- RSI Prevention
 r.run("workrave")
 -- KeePassX Password Manager
-r.run("keepassx -min -lock")
+-- r.run("keepassx -min -lock")
 -- Email Screen Session
-r.run("bash /home/prikhi/.bin/start_split")
+-- r.run("bash /home/prikhi/.bin/start_split")
 
 -- LAN Chat
-r.run("mumble")
+-- r.run("mumble")
 -- WAN Chat
-r.run("pidgin")
+-- r.run("pidgin")
 -- Jack Studio GUI
-r.run("cadence --minimized")
-r.run("claudia")
+-- r.run("cadence --minimized")
+-- r.run("claudia")
 -- Web Browser
 r.run("palemoon")
 
